@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#101219">
+  <title>Crew check • Among Us inspired login</title>
+  <meta name="description" content="Your crew is waiting. Sign in with your registration number and phone number.">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/style.css"><link rel="stylesheet" href="/mobile.css"><script src="/app.js" defer></script>
+</head>
+<body>
+  <div class="stars" aria-hidden="true"></div>
+  <header><a class="brand" href="/" aria-label="Crew check home"><span class="brand-icon">✦</span> CREW<span class="brand-light">CHECK</span></a><span class="ship-status"><i></i> THE SKELD · ONLINE</span></header>
+  <main>
+    <section class="scene" aria-labelledby="scene-title">
+      <div class="eyebrow"><span></span> ALL CREWMATES WELCOME</div>
+      <h1 id="scene-title">You’re one<br>of <span>us.</span></h1>
+      <p class="intro">Your crew is waiting.<br>Check in. Suit up. Let’s go.</p>
+      <div class="space-art" aria-hidden="true">
+        <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+        <span class="spark spark-one">✧</span><span class="spark spark-two">+</span>
+        <div class="crewmate mini purple"><div class="backpack"></div><div class="body"></div><div class="visor"></div><div class="legs"></div></div>
+        <div class="crewmate red"><div class="backpack"></div><div class="body"></div><div class="visor"></div><div class="legs"></div><span class="shine"></span></div>
+        <div class="crewmate mini cyan"><div class="backpack"></div><div class="body"></div><div class="visor"></div><div class="legs"></div></div>
+        <div class="crew-shadow"></div><span class="coordinate">SHIP COORDINATES &nbsp; 04.08 / 21.06</span>
+      </div>
+      <div class="mission"><span class="mission-icon">⌁</span><div><strong>ONE SHIP. ONE CREW.</strong><p>A little sus. A lot of teamwork.</p></div></div>
+    </section>
+    <section class="login-card" aria-labelledby="form-title">
+      <div class="card-top"><span class="tag">CREW ACCESS</span><span class="card-code">01 / CHECK IN</span></div>
+      <div id="login-view">
+        <h2 id="form-title">Join the crew<span>.</span></h2>
+        <p class="card-description">Enter your details to get on board.</p>
+        <form id="login-form">
+          <label for="registration">Registration number</label>
+          <div class="input-wrap"><span aria-hidden="true">#</span><input id="registration" name="registration" autocomplete="username" autocapitalize="characters" spellcheck="false" enterkeyhint="next" placeholder="e.g. CREW001" minlength="3" maxlength="30" pattern="[A-Za-z0-9][A-Za-z0-9-]{2,29}" required></div>
+          <label for="phone">Phone number</label>
+          <div class="input-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="6" y="2" width="12" height="20" rx="3"/><path d="M10 18h4"/></svg><input id="phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" enterkeyhint="go" aria-describedby="phone-hint" placeholder="Phone number" minlength="10" maxlength="25" required></div>
+          <p class="input-hint" id="phone-hint">Use the phone number linked to your registration.</p>
+          <p id="error" class="error" role="alert" hidden></p>
+          <button class="primary" id="submit" type="submit"><span>Let me in</span><span aria-hidden="true">↗</span></button>
+        </form>
+        <div class="access-note"><span aria-hidden="true">◈</span> Only registered crewmates can board.</div>
+        <div class="demo-box"><div><span class="demo-tag">TAKE A TEST FLIGHT</span><p>Try it with a sample crew ID.</p></div><button type="button" id="demo">Use demo <span aria-hidden="true">→</span></button></div>
+      </div>
+      <div id="welcome-view" hidden>
+        <div class="success-icon" aria-hidden="true">✓</div>
+        <div class="eyebrow">IDENTITY CONFIRMED</div>
+        <h2 id="welcome-title" tabindex="-1">Welcome aboard.</h2>
+        <p class="card-description">You’re cleared for the mission, <strong id="crew-name"></strong>.</p>
+        <div class="crew-pass"><span>CREWMATE ID</span><strong id="crew-id"></strong><span class="verified">● VERIFIED</span></div>
+        <p class="welcome-copy">All systems ready. Your crew is glad you’re here.</p>
+        <button class="primary" id="logout" type="button">Sign out <span aria-hidden="true">↗</span></button>
+        <p id="logout-error" class="error" role="alert" hidden></p>
+      </div>
+      <div class="card-bottom"><span><i></i> READY FOR DEPARTURE</span><span>✧</span></div>
+    </section>
+  </main>
+  <footer><span>FAN-MADE · AMONG US INSPIRED</span><span>Stay curious. Stay a little sus. <span class="footer-star">✦</span></span></footer>
+  <noscript><p class="noscript">Enable JavaScript to use this login form.</p></noscript>
+</body>
+</html>

@@ -117,6 +117,18 @@ To ensure everyone can develop smoothly without merge conflicts or overlapping c
 
 ## ⚡ Quickstart & Local Setup
 
+### Python crew login demo
+
+The standalone [Python login page](./python-login/README.md) checks a registration number and phone number against local SQLite crew records. It includes an Among Us inspired interface, a welcome screen, and sign-out. Requires Python 3.10+ and no additional packages:
+
+```bash
+python python-login/app.py
+```
+
+Open `http://127.0.0.1:8000` and select **Use demo** (`CREW001` / `9876543210`). Run its checks with `python python-login/test_login.py`. See the linked guide to add your own records.
+
+This demo runs separately from the React/Express dashboard and does not authenticate its routes or APIs. Phone-number matching is for demonstration; real account access needs a verified authentication factor.
+
 ### Prerequisites
 - **Node.js**: v18.0.0 or higher (v20+ recommended)
 - **npm**: v9.0.0 or higher

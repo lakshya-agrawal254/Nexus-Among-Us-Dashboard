@@ -94,3 +94,9 @@ desktop.ini
 tmp/
 temp/
 scratch/
+
+# Python login runtime data
+__pycache__/
+*.py[cod]
+python-login/*.sqlite3
+python-login/*.sqlite3-*
